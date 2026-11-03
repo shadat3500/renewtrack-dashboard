@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* Design tokens — copied 1:1 from the Figma "Foundations" variables */
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-900: #1e1b4b;
+
+  --color-neutral-0: #ffffff;
+  --color-neutral-25: #f8fafc;
+  --color-neutral-100: #f1f5f9;
+  --color-neutral-200: #e2e8f0;
+  --color-neutral-400: #94a3b8;
+  --color-neutral-500: #64748b;
+  --color-neutral-700: #334155;
+  --color-neutral-900: #0f172a;
+
+  --color-success-50: #dcfce7;
+  --color-success-600: #16a34a;
+  --color-warning-50: #fef3c7;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-danger-50: #fee2e2;
+  --color-danger-600: #dc2626;
+
+  /* Type scale (size / line-height) */
+  --text-h1: 28px;
+  --text-h1--line-height: 36px;
+  --text-h3: 18px;
+  --text-h3--line-height: 26px;
+  --text-body: 14px;
+  --text-body--line-height: 22px;
+  --text-label: 13px;
+  --text-label--line-height: 18px;
+  --text-caption: 12px;
+  --text-caption--line-height: 18px;
+  --text-stat: 36px;
+  --text-stat--line-height: 44px;
+
+  --animate-toast-in: toast-in 200ms ease-out;
+  --animate-fade-in: fade-in 150ms ease-out;
+  --animate-pop-in: pop-in 180ms ease-out;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pop-in {
+  from { opacity: 0; transform: scale(0.97) translateY(6px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+html,
+body {
+  background: var(--color-neutral-25);
+  color: var(--color-neutral-900);
+}
+
+body {
+  font-size: var(--text-body);
+  line-height: var(--text-body--line-height);
+}
